@@ -5,4 +5,8 @@
       <h5>$20.00 / month</h5>
     </div>
   </div>
+  <%= form_for @conn, Routes.checkout_session_path(@conn, :create), [as: :checkout_session], fn f -> %>
+    <%= hidden_input f, :lookup_key, value: "starter" %>
+    <%= submit "Checkout" %>
+  <% end %>
 </section>
