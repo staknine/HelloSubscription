@@ -19,6 +19,7 @@ defmodule HelloSubscriptionWeb.Router do
 
     resources "/portal-session", PortalSessionController, only: [:create]
     resources "/checkout-session", CheckoutSessionController, only: [:create]
+    get "/cancel", PageController, :cancel
     get "/success", PageController, :success
     get "/", PageController, :index
   end

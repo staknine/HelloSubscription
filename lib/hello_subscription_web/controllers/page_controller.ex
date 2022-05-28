@@ -12,4 +12,8 @@ defmodule HelloSubscriptionWeb.PageController do
     |> assign(:session_id, session_id)
     |> render("success.html")
   end
+
+  def cancel(conn, _params) do
+    render(conn, "cancel.html")
+  end
 end
