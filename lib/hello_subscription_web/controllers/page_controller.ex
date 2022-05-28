@@ -4,4 +4,8 @@ defmodule HelloSubscriptionWeb.PageController do
   def index(conn, _params) do
     render(conn, "index.html")
   end
+
+  def success(conn, _params) do
+    render(conn, "success.html")
+  end
 end

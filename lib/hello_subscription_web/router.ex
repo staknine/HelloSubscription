@@ -18,6 +18,7 @@ defmodule HelloSubscriptionWeb.Router do
     pipe_through :browser
 
     resources "/checkout-session", CheckoutSessionController, only: [:create]
+    get "/success", PageController, :success
     get "/", PageController, :index
   end
 
