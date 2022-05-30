@@ -5,7 +5,11 @@ defmodule HelloSubscriptionWeb.PageController do
     render(conn, "index.html")
   end
 
-  def success(conn, _params) do
-    render(conn, "success.html")
+  def success(conn, params) do
+    %{"session_id" => session_id} = params
+
+    conn
+    |> assign(:session_id, session_id)
+    |> render("success.html")
   end
 end

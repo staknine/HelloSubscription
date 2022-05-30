@@ -4,4 +4,8 @@
       <h3>Subscription to Starter plan successful!</h3>
     </div>
   </div>
+  <%= form_for @conn, Routes.portal_session_path(@conn, :create), [as: :portal_session], fn f -> %>
+    <%= hidden_input f, :session_id, value: @session_id %>
+    <%= submit "Manage billing info" %>
+  <% end %>
 </section>
